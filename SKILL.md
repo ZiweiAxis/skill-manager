@@ -19,6 +19,13 @@ This system resolves the fragmentation of skills across multiple AI Agents (Curs
   1. `universal`: A skill available to ALL registered Agents.
   2. Specific (e.g. `claude_code`, `cursor`): A skill restricted to specific Agents only.
 
+## Specialist Agents (Progressive Disclosure)
+
+When performing complex setup or configuration tasks, read the specialized instructions for the corresponding domain:
+
+1. **New Skill Provisioning**: (Setting up `meta.yaml` and distributing a newly created/installed skill)
+   👉 Read `agents/provision_agent.md`
+
 ## Your Responsibilities
 
 ### 1. Synchronizing Skills
@@ -54,5 +61,11 @@ If the user says: "Make `skill-xyz` visible to Cursor", you edit `~/.skills/skil
 ### 4. Auditing Skill Distribution
 If the user asks "Which skills are available to Claude?", you can check the scope fields in the various `meta.yaml` files in `~/.skills/`, or simply list the contents of the `~/.claude/skills/` directory to see the symlinks.
 
-## Handoff from other skills
-`skill-creator` builds skills, and `skill-installer` downloads skills. After they finish, they will typically tell the user "Call skill-manager to configure and sync the skill." You should step in to write the `meta.yaml` appropriately and perform the sync script to finalize the delivery.
+## Handoff & Lifecycle Integration
+
+`skill-manager` acts as the **Final Stage** in the skill lifecycle. 
+
+- **From `skill-creator`**: Once a new skill is drafted and verified, you are called to provision its metadata and sync it.
+- **From `skill-installer`**: Once a remote skill is downloaded, you are called to distribute it to the local agent directories.
+
+**CRITICAL**: In these handoff scenarios, you MUST immediately read `agents/provision_agent.md` and follow its workflow to complete the task. Do not simply run the sync script without verifying the `meta.yaml`.
