@@ -2,6 +2,13 @@
 
 The central orchestrator for the **Universal Skill Management (USM)** architecture. It manages the distribution, synchronization, and scope of AI skills across multiple agent platforms (Claude, Cursor, Codex, Gemini, etc.).
 
+## 📦 Installation from Registry
+
+To install or update the `skill-manager` via the public registry:
+```bash
+clawhub install skill-manager-usm
+```
+
 ## ❓ Why Skill Manager?
 
 As you build or install more AI skills, you'll encounter several **pain points**:
