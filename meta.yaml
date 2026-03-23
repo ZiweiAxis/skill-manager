@@ -1,0 +1,5 @@
+name: "skill-manager"
+version: "1.0"
+scope: "universal"
+description: "Manage global skill distribution across multiple Agents"
+tags: ["meta", "management"]
