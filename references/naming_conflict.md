@@ -8,6 +8,7 @@ In the USM 2-layer architecture (`~/.skills/`), all skills reside in the same fl
 ## 💡 Proposed Solutions
 
 ### 1. `skill-creator`: Front-end Prevention
+- **Decision**: Keep local name as `skill-creator` but use registry slug `skill-creator-usm`.
 - **Prompt**: During the "Interview" phase, the AI checks if the chosen name is a common keyword (e.g., `git`, `docker`, `search`, `openai`).
 - **Logic**: If a collision is detected locally or globally (by checking `~/.skills/`), proactive advice is offered:
   - "The name `docker` is common. I suggest `user-docker` or `docker-management` to avoid conflict."
