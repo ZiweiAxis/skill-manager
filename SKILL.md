@@ -1,6 +1,6 @@
 ---
 name: skill-manager
-description: [USM] Manages the distribution and visibility of skills across multiple AI Agents using the 2-layer 2-dimension Universal Skill Manager architecture.
+description: [USM] Manages the distribution and visibility of skills across multiple AI Agents using the 2-layer 2-dimension Universal Skill Manager architecture. Use this skill when asked to "sync skills," "manage agents," "change a skill's scope/availability," "make a skill universal," or when investigating which skills are available to which agents.
 ---
 
 # Skill Manager
