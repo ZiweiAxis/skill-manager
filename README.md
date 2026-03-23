@@ -2,6 +2,18 @@
 
 The central orchestrator for the **Universal Skill Management (USM)** architecture. It manages the distribution, synchronization, and scope of AI skills across multiple agent platforms (Claude, Cursor, Codex, Gemini, etc.).
 
+## ❓ Why Skill Manager?
+
+As you build or install more AI skills, you'll encounter several **pain points**:
+- **Fragmentation**: Skills are scattered across hidden directories (`~/.cursor/rules`, `~/.claude/skills`, etc.), making them hard to find and manage.
+- **Redundancy & Inconsistency**: Manually copying a skill to multiple agent folders leads to version drift. You update it for Cursor, but the Claude version remains stale.
+- **Manual Overhead**: Setting up a new agent or project from scratch requires manually linking or copying dozens of skills.
+
+**Skill Manager solves this by providing:**
+1. **Single Source of Truth**: All physical files live in one place (`~/.skills/`).
+2. **Automated Distribution**: One command (`sync_skills.sh`) broadcasts updates to all your tools via symbolic links.
+3. **Granular Control**: Use `meta.yaml` to define which agent gets which skill (Universal vs. Specific).
+
 ## 🚀 The 2-Layer 2-Dimension Architecture
 
 This project implements a robust "Source of Truth" pattern:
